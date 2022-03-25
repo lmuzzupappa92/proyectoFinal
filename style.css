@@ -1,0 +1,151 @@
+body {
+    background-color: rgb(66,126,128);
+    margin: 0 auto;
+}
+.video {
+    margin: 100px;
+    width: 100%;
+}
+.boton {
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 2px 2px rgb(41, 52, 109)   ;
+    border: 1px solid white;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 3px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+
+/*--------HEADER-----------*/
+header {
+    min-height: 500px;
+    background: url(./assets/imagenes/codigo.jpeg) 50% 0 fixed;
+    background-size:cover;
+    background-attachment:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.contenedorPadre {
+    height: 70px;
+    display: flex;
+    gap: 30px;
+    justify-content:right;    
+}
+ul {
+display: flex;
+gap: 20px;
+ list-style: none;
+}
+
+.titulos {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: 3px 3px black;
+    background-color:rgb(80, 80, 80);
+    font-size: 50px;
+    border-radius: 3px;
+    text-align: center;
+}
+/*----------MAIN----------*/
+
+.contenedorMain {
+    margin: 100px;
+    padding: 100px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+
+}
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 2px 2px gray;
+}
+.tarjetas { 
+    margin: 0 auto;
+    width: 350px;
+    height: 420px;
+    border: 5px solid #154454;
+    background-color: #F0F5E4;
+}
+.tarjetas:hover {
+    transform: translate(0, -12px);
+    box-shadow: 0 12px 12px rgb(248, 248, 248, 0.5);
+}
+    
+.imgTarjeta {
+width: 100%;
+height: 220px;
+}
+
+.img1 {
+    background: url(./assets/imagenes/img1.jpg);
+    background-size: cover;
+}
+.img2 {
+    background: url(./assets/imagenes/img2.jpg);
+    background-size: cover;
+
+}
+.textTarjeta {
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.boton2 {
+    width: 150px;
+    height: 20px;
+    margin: 80px;
+    padding: 10px 40px;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(66,126,128);;
+    border-radius: 5px;
+;
+}
+
+/*-----------------FOOTER------------------*/
+
+footer {
+    height:80px;
+    background-color: black;
+    display:flex;
+    justify-content: space-between;
+    margin: 20px 0; 
+}
+h3 {
+    padding: 5px;
+    text-align: center;
+    font-size: 22px;
+    color: wheat;
+}
+p.copyright {
+    color: white;
+
+}
+
+/*-----------------HISTORIA.HTML------------------*/
+
+.textosHistoria {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 60px;
+    gap: 20px;
+}
+.parrafoHistoria {
+    width: 45%;
+    font-family: 'Montserrat', sans-serif;
+
+}
