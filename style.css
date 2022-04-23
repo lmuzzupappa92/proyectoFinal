@@ -2,24 +2,21 @@ body {
     background-color: rgb(66,126,128);
     margin: 0 auto;
 }
-.video {
-    margin: 100px;
-    width: 100%;
-}
+
 .boton {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
     align-items: center;
     text-decoration: none;
-    box-shadow: 2px 2px rgb(41, 52, 109)   ;
+    box-shadow: 2px 2px rgba(0,0,0,0.8)  ;
     border: 1px solid white;
     background-color: aliceblue;
-    border-radius: 5px;
-    padding: 3px;
-    margin-top: 20px;
-    margin-right: 10px;
+    border-radius: 8px;
+    padding: 7px;
 }
 
 
-/*--------HEADER-----------*/
+/*--------------------------------HEADER--------------------------------*/
 header {
     min-height: 500px;
     background: url(./assets/imagenes/codigo.jpeg) 50% 0 fixed;
@@ -32,27 +29,82 @@ header {
 }
 
 .contenedorPadre {
+    margin: 10px 70px 0 0;
     height: 70px;
     display: flex;
-    gap: 30px;
-    justify-content:right;    
+    justify-content:space-between; 
 }
+#svg {
+    margin-left: 100px;
+}
+
+rect#supExterno, polygon#infExterno{
+    animation: part_1 ease-in 4s  ;
+    animation-iteration-count:1 ;
+    }
+    
+rect#supInterno,polygon#infInterno {
+animation: part_2 ease-in 4s  ;
+animation-iteration-count:1 ;
+}
+@keyframes part_1{
+    0% {
+    transform: translate(0,-10px);
+    opacity:0;}
+    20% {
+    transform: translate(0,-10px);
+    opacity:0;}
+    30% {
+    transform: translate(0,0);
+    opacity:0.5;}
+    90% {
+    transform: translate(0,0);
+    opacity:0.5;}
+    
+    100% {
+        transform: translate(0,0);
+        opacity:1;}
+}   
+    
+
+@keyframes part_2 {
+    0% {
+        transform: translate(0,-10px);
+        opacity:0;}
+        30% {
+        transform: translate(0,-10px);
+        opacity:0.3;}
+        40% {
+        transform: translate(0,0);
+        opacity:0.6;}
+        90% {
+        transform: translate(0,0);
+        opacity:0.9;}
+
+        100% {
+            transform:translate(0,0);
+            opacity:1;}
+        }  
+        
 ul {
+
 display: flex;
-gap: 20px;
- list-style: none;
+gap: 40px;
+list-style: none;
 }
 
 .titulos {
+    padding: 0 ;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold ;
     color: white;
-    text-shadow: 3px 3px black;
-    background-color:rgb(80, 80, 80);
+    text-shadow: 4px 4px black;
+    background-color:rgb(53, 52, 52);
     font-size: 50px;
     border-radius: 3px;
     text-align: center;
 }
-/*----------MAIN----------*/
+/*--------------------------------MAIN--------------------------------*/
 
 .contenedorMain {
     margin: 100px;
@@ -62,12 +114,14 @@ gap: 20px;
     gap: 40px;
 
 }
+
 h2 {
     font-family: 'Montserrat', sans-serif;
-    color: whitesmoke;
-    text-align: center;
     font-size: 40px;
-    text-shadow: 2px 2px gray;
+    font-style: bold;
+    color: #F0F5E4;
+    text-align: center;
+    text-shadow: 2px 2px black;
 }
 .tarjetas { 
     margin: 0 auto;
@@ -115,37 +169,198 @@ height: 220px;
 ;
 }
 
-/*-----------------FOOTER------------------*/
+/*--------------------------------FOOTER--------------------------------*/
+svg {
+    overflow: hidden;
+}
 
 footer {
     height:80px;
     background-color: black;
-    display:flex;
+    margin: 10px 0;
+    display: flex;
     justify-content: space-between;
-    margin: 20px 0; 
+}
+#primerfooter {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
 }
 h3 {
+
+    font-family: 'Montserrat', sans-serif;
     padding: 5px;
     text-align: center;
-    font-size: 22px;
-    color: wheat;
-}
-p.copyright {
+    font-size: 12px;
     color: white;
-
+}
+.copyright {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size:14px;
+    color: white;
+    padding: 10px;
+}
+#iconoFooter {
+     margin: 10px;
+     margin-left: 30px;
 }
 
-/*-----------------HISTORIA.HTML------------------*/
-
+/*--------------------------------HISTORIA.HTML--------------------------------*/
+#mainHistoria{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .textosHistoria {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 80px 60px;
+    padding: 80px 50px;
     gap: 20px;
 }
 .parrafoHistoria {
     width: 45%;
     font-family: 'Montserrat', sans-serif;
 
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+
+}
+ #videoTitulo {
+     margin-top: 200px;
+ }
+#containerVideo {
+    margin: 10px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+.video {
+    margin-top:10px;
+    width: 70%;
+    border:5px solid black;
+    display: flex;
+
+}
+.barra {
+    position: absolute;
+    bottom: 0;
+    width: 70%;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgba(0,0,0);
+    border-radius: 10px;
+    height: 60x;
+
+}
+.reproductor {
+    display: flex;
+    align-items:center;
+    height: 50px
+}
+.botonVid {
+    margin: 5px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(41, 52, 109);
+}
+#play {
+    width: 85px;
+}
+#pause {
+    width: 85px;
+}
+.tiempoVideo {
+    margin-right: 50px;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+
+/*--------------------------------JUGUEMOS.HTML--------------------------------*/
+/*#puzzle {
+    padding: 100px;
+    margin: 100px;
+    width: 60%;
+    height: 400px;
+    background-color: pink;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.espacio {
+    border: 1px solid black;
+    width: 33.5%;
+}
+#tarjetas {
+    padding: 100px;
+    margin: 100px;
+    background-color: lightblue;
+    width: 60%;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.tarjeta1, .tarjeta2 ,.tarjeta3 {
+    border: 1px solid black;
+    width: 33.5%;
+}*/
+#mainJuguemos {
+    padding: 100px 0;
+}
+.juego {
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#puzzle {   
+    width: 49%;
+    height: 450px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+#tarjetas {
+    margin: 30px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.espacio1, .espacio2, .espacio3{
+
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(85, 84, 84, 0.5);
+    border: 3px solid black;
+    width: 300px;
+    height: 440px;
+}
+
+.tarjeta1, .tarjeta2, .tarjeta3{
+
+    width: 300px;
+    height: 440px;
+
+}
+
+#reinicio {
+    background-color: #f0f5e4;
+    display: flex;
+    margin: 30px 0 40px 0;
+    padding: 10px 100px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 3px 4px #154454;
+    opacity: 85%;
+}
+#reinicio:hover {
+    opacity: 100%;
 }

@@ -10,37 +10,70 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
 
         <title>Evaluacion final Modulo CSS3,HTML5,JS avanzado.</title>
+
     </head>
 
-
     <body>
+        <nav class="contenedorPadre">
 
-            <nav class="contenedorPadre">
-
-                <a href="./assets/imagenes/"></a>
-        
-                <ul>
-                    <li class="itemNav">
-        
-                        <a class="boton" href="./historia.html">HISTORIA</a>
-        
-                    </li>
-                    <li class="itemNav">
-        
-                        <a class="boton" href="./juguemos.html">JUGUEMOS</a>
-        
-                    </li>
-                </ul>
+            <a id="svg" href="./index.html">
             
-            </nav> 
-        <header>       
-            <h1 class="titulos">JUGUEMOS UN POCO</h1>
-        </header>
+                <svg width="120" height="80">
+                    <rect id="supExterno" x="45" y="5" width="60" height="35" rx="5" fill="#3F6797"></rect>
+                    <rect id="supInterno" x="50" y="10" width="50" height="25" rx="5"  fill="#B1D5E4"></rect>
+                    <polygon id="infExterno" points="55 45 ,95 45,115 62,30 62" fill="#3F6797"></polygon>
+                    <polygon id="infInterno" points="57 48 ,92 48,104 58,43 58" fill="#B1D5E4" ></polygon>
+                </svg>
+
+            </a>
+            <ul>
+                <li class="itemNav">
+
+                    <a class="boton" href="./historia.html">HISTORIA</a>
+
+                </li>
+                <li class="itemNav">
+
+                    <a class="boton" href="./juguemos.html">JUGUEMOS</a>
+
+                </li>
+            </ul>
+        
+        </nav> 
+        <header>
+
+            <h1 class="titulos"> JUGUEMOS UN POCO </h1>
+
+        </header>>
           
-        <main>
+        <main id="mainJuguemos">
             <h2>Armemos el rompecabezas y veamos que imagen es...
             </h2>
           
+            <div class="juego">
+
+                <section id="puzzle">
+                    <div class="espacio1">Arrastre y suelte las imagenes aquí</div>
+                    <div class="espacio2">Arrastre y suelte las imagenes aquí</div>
+                    <div class="espacio3">Arrastre y suelte las imagenes aquí</div>
+    
+                </section>
+
+                <section id="tarjetas"> 
+                    <img class="tarjeta2" src=".//assets/imagenes/Rompe2.png" alt="pieza2Puzzle">
+                    <img class="tarjeta1" src=".//assets/imagenes/Rompe1.png" alt="pieza1Puzzle">
+                    <img class="tarjeta3" src=".//assets/imagenes/Rompe3.png" alt="pieza3Puzzle">
+                       
+
+                </section>
+
+                <a id="reinicio" href="./juguemos.html" class="boton">Reiniciar</a>
+
+
+            </div>
+
+
+
         </main>
 
             <script src="./script.js"></script>
