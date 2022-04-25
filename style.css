@@ -53,13 +53,13 @@ animation-iteration-count:1 ;
     opacity:0;}
     20% {
     transform: translate(0,-10px);
-    opacity:0;}
+    opacity:0.3;}
     30% {
     transform: translate(0,0);
-    opacity:0.5;}
+    opacity:0.6;}
     90% {
     transform: translate(0,0);
-    opacity:0.5;}
+    opacity:0.9;}
     
     100% {
         transform: translate(0,0);
@@ -123,14 +123,14 @@ h2 {
     text-align: center;
     text-shadow: 2px 2px black;
 }
-.tarjetas { 
+.tarjetasOpciones { 
     margin: 0 auto;
     width: 350px;
     height: 420px;
     border: 5px solid #154454;
     background-color: #F0F5E4;
 }
-.tarjetas:hover {
+.tarjetasOpciones:hover {
     transform: translate(0, -12px);
     box-shadow: 0 12px 12px rgb(248, 248, 248, 0.5);
 }
@@ -170,9 +170,7 @@ height: 220px;
 }
 
 /*--------------------------------FOOTER--------------------------------*/
-svg {
-    overflow: hidden;
-}
+
 
 footer {
     height:80px;
@@ -181,13 +179,14 @@ footer {
     display: flex;
     justify-content: space-between;
 }
-#primerfooter {
-    width: 300px;
+.primerFooter {
     display: flex;
     justify-content: space-between;
+    height: 80px;
+    width: 300px;
+
 }
 h3 {
-
     font-family: 'Montserrat', sans-serif;
     padding: 5px;
     text-align: center;
@@ -195,6 +194,8 @@ h3 {
     color: white;
 }
 .copyright {
+    display: flex;
+    align-items: center;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size:14px;
@@ -283,6 +284,65 @@ p {
 }
 
 /*--------------------------------JUGUEMOS.HTML--------------------------------*/
+#mainJuguemos {
+    padding: 100px 0;
+}
+.juego {
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+#puzzle {   
+    width: 49%;
+    height: 450px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+#tarjetas {
+    width: 50%;
+    margin: 30px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.espacio1, .espacio2, .espacio3{
+
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(85, 84, 84, 0.5);
+    border: 3px solid black;
+    width: 300px;
+    height: 440px;
+}
+
+.tarjeta1, .tarjeta2, .tarjeta3{
+
+    width: 300px;
+    height: 440px;
+    cursor: move;
+
+}
+
+#reinicio {
+    background-color: #f0f5e4;
+    display: flex;
+    margin: 30px 0 40px 0;
+    padding: 10px 100px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 3px 4px #154454;
+    opacity: 85%;
+}
+#reinicio:hover {
+    opacity: 100%;
+}
+
+/*************************OTRAOPCIONESTILOJUGUEMOS.HTML*************************/
+
 /*#puzzle {
     padding: 100px;
     margin: 100px;
@@ -310,57 +370,3 @@ p {
     border: 1px solid black;
     width: 33.5%;
 }*/
-#mainJuguemos {
-    padding: 100px 0;
-}
-.juego {
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-#puzzle {   
-    width: 49%;
-    height: 450px;
-    margin: 30px;
-    display: flex;
-    justify-content: center;
-}
-#tarjetas {
-    margin: 30px;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-.espacio1, .espacio2, .espacio3{
-
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px;
-    text-align: center;
-    background-color: rgba(85, 84, 84, 0.5);
-    border: 3px solid black;
-    width: 300px;
-    height: 440px;
-}
-
-.tarjeta1, .tarjeta2, .tarjeta3{
-
-    width: 300px;
-    height: 440px;
-
-}
-
-#reinicio {
-    background-color: #f0f5e4;
-    display: flex;
-    margin: 30px 0 40px 0;
-    padding: 10px 100px;
-    border-radius: 10px;
-    color: black;
-    box-shadow: 3px 4px #154454;
-    opacity: 85%;
-}
-#reinicio:hover {
-    opacity: 100%;
-}
